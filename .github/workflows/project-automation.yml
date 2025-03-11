@@ -15,6 +15,6 @@ permissions:
 
 jobs:
   call-project-automation-workflow:
-    uses: mauroalderete/workflows/.github/workflows/project-automation.yml@v0
+    uses: cedeirasf/CedMT-devops-workflows/.github/workflows/project-automation.yml@v1
     secrets:
       GH_PROJECT_AUTOMATION: ${{ secrets.GH_PROJECT_AUTOMATION }}

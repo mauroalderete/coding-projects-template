@@ -3,12 +3,13 @@ name: Labeling
 on:
   pull_request:
     branches: [main]
-    types: [opened, reopened, synchronize, labeled, unlabeled]
+    types: [opened, reopened, synchronize]
 
 permissions:
   pull-requests: write
 
 jobs:
   call-labeling-workflow:
-    uses: mauroalderete/workflows/.github/workflows/labeling.yml@v0
-    secrets: inherit
+    uses: cedeirasf/CedMT-devops-workflows/.github/workflows/labeling.yml@v1
+    secrets:
+      github-token: ${{ secrets.GH_PROJECT_AUTOMATION }}
